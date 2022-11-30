@@ -17,6 +17,9 @@
     <string name="text_hint_book_url_img">Ingresa url de la imagen</string>
     <string name="btn_create_book">Guardar</string>
     <string name="title_activity_detalles_del_libro">detallesDelLibro</string>
+
+    <string name="menu_option_share">Compartir</string>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -107,4 +110,8 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+
+
+    <!-- STRING CUSTOMIZADO CON UN VALOR ALEATORIO-->
+    <string name="txt_name_character_detail_activity">* %1$s \n</string>
 </resources>

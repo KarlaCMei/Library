@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements OnClicBookListene
         detailActivity.putExtra("NUM_PAGES", book.getPageNum());
         detailActivity.putExtra("NUM_COPIES", book.getCopies());
         detailActivity.putExtra("URL_IMG", book.getUrlImg());
+        detailActivity.putExtra("LIST_CHARACTERS", book.getCharacters());
         startActivity(detailActivity);
     }
 

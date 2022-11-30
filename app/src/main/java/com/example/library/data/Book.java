@@ -2,6 +2,8 @@ package com.example.library.data;
 
 import com.example.library.view.MainActivity;
 
+import java.util.ArrayList;
+
 public class Book extends MainActivity {
     private String id;
     private String titulo;
@@ -10,11 +12,12 @@ public class Book extends MainActivity {
     private int pageNum;
     private int copies;
     private String urlImg;
+    private ArrayList<String> characters;
 
     public Book() {
     }
 
-    public Book(String id, String titulo, String descripcion, String genero, int pageNum, int copies, String urlImg) {
+    public Book(String id, String titulo, String descripcion, String genero, int pageNum, int copies, String urlImg, ArrayList<String> characters) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
@@ -22,6 +25,7 @@ public class Book extends MainActivity {
         this.pageNum = pageNum;
         this.copies = copies;
         this.urlImg = urlImg;
+        this.characters =characters;
     }
 
     public String getId() {
@@ -78,5 +82,13 @@ public class Book extends MainActivity {
 
     public void setUrlImg(String urlImg) {
         this.urlImg = urlImg;
+    }
+
+    public ArrayList<String> getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(ArrayList<String> characters) {
+        this.characters = characters;
     }
 }

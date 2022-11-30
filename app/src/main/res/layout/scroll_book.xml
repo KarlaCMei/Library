@@ -11,13 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        android:background="#D2BBAB"
         tools:context=".ScrollingActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="300dp"
             android:fitsSystemWindows="true"
             android:theme="@style/Theme.LibreriaScrolling.AppBarOverlay">
 
@@ -27,8 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
-                android:background="#D2BBAB"
-                app:contentScrim="@color/purple_500"
+                app:contentScrim="?attr/colorPrimary"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:toolbarId="@+id/toolbar">
 
@@ -44,12 +42,12 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar_book_detail"
+                    android:id="@+id/toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="?actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin"
-                    app:popupTheme="@style/Theme.Library.PopupOverlay"
-                    />
+                    app:title="Curriculum"
+                    app:popupTheme="@style/Theme.LibreriaScrolling.PopupOverlay" />
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
@@ -57,7 +55,7 @@
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nestedScrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="604dp"
             app:layout_anchor="@+id/nestedScrollView"
             app:layout_anchorGravity="center"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -67,6 +65,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#D2BBAB"
                 android:padding="16dp"
                 tools:context=".MainActivity">
 
@@ -88,22 +87,6 @@
                     tools:text="Genero" />
 
                 <TextView
-                    android:id="@+id/text_characters"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.4"
-                    android:background="#FFF9CA"
-                    android:fontFamily="sans-serif-black"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:textColor="@android:color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_gender"
-                    tools:text="Genero" />
-
-                <TextView
                     android:id="@+id/text_description_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -116,7 +99,7 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_characters" />
+                    app:layout_constraintTop_toBottomOf="@+id/text_gender" />
 
                 <TextView
                     android:id="@+id/text_description"
